@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="build/css/style.min.css">
+    <!-- <link rel="icon" type="image/x-icon" href="build/favicons/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="build/favicons/favicon.ico"> -->
+    <title>Моё здоровье</title>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <div class="main-header__wrap">
+                <div class="main-header__logo">
+                    <img class="main-header__logo-img" src="build/img/content/site-logo.svg" alt="Логотип Моё здоровье" width="110" height="42">
+                </div>
+                <ul class="main-header__market">
+                    <li class="main-header__market-item">
+                        <a class="main-header__market-link main-header__market-link--go" href="#">
+                            <span class="visually-hidden">Доступно в Google play</span>
+                        </a>
+                    </li>
+                    <li class="main-header__market-item">
+                        <a class="main-header__market-link main-header__market-link--app" href="#">
+                            <span class="visually-hidden">Доступно в Google App Store</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="main-header__logo-company">
+                    <img src="build/img/content/logo-company-header.svg" alt="Логотип компании «Медицинские информационные решения»" width="127" height="39">
+                </div>
+                <div class="main-header__wrapper site-nav">
+                    <button class="site-nav__button hamburger" type="button">
+                        <span class="visually-hidden">Открыть/скрыть меню</span>
+                    </button>
+                    <!-- <ul class="site-nav__list">
+                        <li class="site-nav__item">
+                            <a class="site-nav__item-link">Главная</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a class="site-nav__item-link" href="#">Справочник здоровья</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a class="site-nav__item-link" href="#">Форма отзыва</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a class="site-nav__item-link" href="#">Информация</a>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </nav>
+        <div class="main-header__promo-wrap">
+            <p class="main-header__promo">Все данные о вашем здоровье в одном приложении</p>
+            <p class="main-header__promo-text">Универсальная электронная медицинская карта<br> и сервис для дистанционного сопровождения пациентов, которая решает следующие проблемы:</p>
+            <ul class="main-header__list">
+                <li class="main-header__list-item main-header__list-item--mob">Все необходимое в одном месте</li>
+                <li class="main-header__list-item main-header__list-item--steth">Разработано врачами</li>
+                <li class="main-header__list-item main-header__list-item--lock">Безопасность данных</li>
+                <li class="main-header__list-item main-header__list-item--rub">Бесплатное приложение</li>
+            </ul>
+            <ul class="main-header__market--mob">
+                <li class="main-header__market-item">
+                    <a class="main-header__market-link main-header__market-link--app" href="#">
+                        <span class="visually-hidden">Доступно в Google play</span>
+                    </a>
+                </li>
+                <li class="main-header__market-item">
+                    <a class="main-header__market-link main-header__market-link--go" href="#">
+                        <span class="visually-hidden">Доступно в Google App Store</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="main-header__slider slider">
+                <div class="slider-wrap">
+                    <picture>
+                        <source media="(min-width:1550px)"
+                                srcset="build/img/content/mob-copy-5.png">
+                        <img class="slider__slide slider__slide1" src="build/img/content/slide-header3.png" alt="Мобильное приложение">
+                    </picture>
+                    <picture>
+                        <source media="(min-width:1550px)"
+                                srcset="build/img/content/group-copy-31@2x.png">
+                        <img class="slider__slide slider__slide2 active" src="build/img/content/slide-header2.png" alt="Мобильное приложение">
+                    </picture>
+                </div>
+                <div class="slider__buttons">
+                    <div class="slider__buttons-wrap slider__buttons--left">
+                        <button class="slider__btn slider__btn-prev" type="button">
+                            <i class="visually-hidden">iOS</i>
+                        </button>
+                        <span>iOS</span>
+                    </div>
+                    <div class="slider__buttons-wrap slider__buttons--right">
+                        <button class="slider__btn slider__btn-next active" type="button">
+                            <i class="visually-hidden">Android</i>
+                        </button>
+                        <span>Android</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="visually-hidden">Универсальная электронная медицинская карта вашего здоровья в одном приложении</h1>
+        <section class="features">
+            <h2 class="features__title">Возможности приложения</h2>
+            <div class="features__list-group">
+                <ul class="features__list">
+                    <li class="features__list-item features__list-item--control">Контроль показателей своего здоровья </li>
+                    <li class="features__list-item features__list-item--course">Создание курсов приема лекарств</li>
+                    <li class="features__list-item features__list-item--storage">Хранение медицинских документов</li>
+                    <li class="features__list-item features__list-item--reminders">Создание напоминаний</li>
+                </ul>
+                <ul class="features__list">
+                    <li class="features__list-item features__list-item--calendar">Календарь менструального цикла</li>
+                    <li class="features__list-item features__list-item--diary">Дневник течения беременности</li>
+                    <li class="features__list-item features__list-item--news">Актуальные<br> новости</li>
+                    <li class="features__list-item features__list-item--consult">Консультации<br> врачей онлайн</li>
+                </ul>
+            </div>
+        </section>
+        <section class="health-indicator">
+            <div class="health-indicator__wrap">
+                <h2 class="health-indicator__title">Контролируйте показатели своего здоровья</h2>
+                <div class="health-indicator__list-wrap">
+                    <ul class="health-indicator__list">
+                        <li class="health-indicator__item health-indicator__item--weight">Вес</li>
+                        <li class="health-indicator__item health-indicator__item--height">Рост</li>
+                        <li class="health-indicator__item health-indicator__item--temp">Температура</li>
+                        <li class="health-indicator__item health-indicator__item--random">Произвольные показатели</li>
+                    </ul>
+                    <ul class="health-indicator__list">
+                        <li class="health-indicator__item health-indicator__item--pressure">Артериальное давление</li>
+                        <li class="health-indicator__item health-indicator__item--sugar">Сахар в крови</li>
+                        <li class="health-indicator__item health-indicator__item--heart">Частота сердечных<br> сокращений</li>
+                    </ul>
+                </div>
+                <div class="health-indicator__mobile-app mobile-app">
+                    <img class="health-indicator__mobile-img" src="build/img/content/mobile-app.png" alt="Примеры мобильного приложения" width="288">
+                </div>
+                <div class="health-indicator__slider health-slider">
+                    <div class="health-slider__slides">
+                        <picture>
+                            <source media="(min-width:1550px)"
+                                    srcset="build/img/content/indicators1-d.png">
+                            <img class="opacity" src="build/img/content/indicators1.png" alt="Показатели" width="226">
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1550px)"
+                                    srcset="build/img/content/indicators2d.png">
+                            <img src="build/img/content/indicators2.png" alt="Давление" width="226">
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1550px)"
+                                    srcset="build/img/content/indicators3d.png">
+                            <img src="build/img/content/indicators3.png" alt="Вес" width="226">
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1550px)"
+                                    srcset="build/img/content/indicators4d.png">
+                            <img src="build/img/content/indicators4.png" alt="Сахар" width="226">
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1550px)"
+                                    srcset="build/img/content/indicators5d.png">
+                            <img src="build/img/content/indicators5.png" alt="Температура" width="226">
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1550px)"
+                                    srcset="build/img/content/indicators6-d.png">
+                            <img src="build/img/content/indicators6.png" alt="Пульс" width="226">
+                        </picture>
+                        <picture>
+                            <source media="(min-width:1550px)"
+                                    srcset="build/img/content/indicators7d.png">
+                            <img src="build/img/content/indicators7.png" alt="Рост" width="226">
+                        </picture>
+                    </div>
+                    <button class="health-slider__btn health-slider__btn-prev" type="button">
+                        <span class="visually-hidden">Назад</span>
+                    </button>
+                    <button class="health-slider__btn health-slider__btn-next" type="button">
+                        <span class="visually-hidden">Вперед</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__wrap">
+            <div class="main-footer__logo-company">
+                <img src="build/img/content/logo-company.svg" alt="Логотип компании «Медицинские информационные решения»" width="119" height="37">
+            </div>
+            <div class="main-footer__copyright">
+                <div class="main-footer__copy-lang">
+                    <a class="main-footer__copy-lang--en" href="#">EN</a>
+                    /
+                    <a class="main-footer__copy-lang--ru" href="#">RU</a>
+                </div>
+                <p class="main-footer__copy-title">Моё Здоровье</p>
+                <p class="main-footer__copy">2016–2019 &copy; ООО «МИР»</p>
+            </div>
+        </div>
+    </footer>
+    <script src="build/js/main.js"></script>
+</body>
+</html>
