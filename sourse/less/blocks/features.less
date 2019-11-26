@@ -1,0 +1,183 @@
+.features {
+    position: relative;
+    width: 360px;
+    margin: 0 auto;
+    padding: 0 36px 21px 36px;
+    box-sizing: border-box;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        width: 161px;
+        height: 188px;
+        background-image: url("../img/decorative/spots-m.png");
+        background-repeat: no-repeat;
+    }
+}
+.features__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: normal;
+    text-align: center;
+    font-weight: normal;
+    color: @bright-color-text1;
+}
+.features__list {
+    .no-list-style();
+}
+.features__list-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 45px;
+    margin-bottom: 20px;
+    padding-left: 80px;
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: normal;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 45px;
+        height: 45px;
+        background: url("../img/icons/css_sprites.png") no-repeat;
+        background-position: -10px -10px;
+    }
+    &--course::before {
+        background-position: -10px -75px;;
+    }
+    &--storage::before {
+        background-position: -140px -75px;
+    }
+    &--reminders::before {
+        background-position: -10px -140px;
+    }
+    &--calendar::before {
+        background-position: -75px -75px;
+    }
+    &--diary::before {
+        background-position: -140px -10px;
+    }
+    &--news::before {
+        background-position: -75px -140px;
+    }
+    &--consult::before {
+        background-position: -75px -10px;
+    }
+    &--consult::after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        right: 30px;
+        width: 53px;
+        height: 15px;
+        border-radius: 9px;
+        background-image: url("../img/icons/label-consult.png");
+        z-index: 2;
+    }
+}
+@media(min-width: @tablet-width) {
+    .features {
+        width: 570px;
+        padding: 104px 0 40px 0;
+
+        &::after {
+            position: static;
+        }
+    }
+    .features__title {
+        margin-bottom: 30px;
+        text-align: left;
+        font-size: 28px;
+        line-height: normal;
+    }
+    .features__list-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .features__list-item {
+        width: 253px;
+        padding-left: 65px;
+        padding-right: 0;
+        box-sizing: border-box;
+
+        &--consult::after {
+            right: 18px;
+        }
+    }
+}
+@media(min-width: @desktop-width) {
+    .features {
+        width: 1500px;
+    }
+    .features__title {
+        margin-bottom: 42px;
+        font-size: 46px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+    .features__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 720px;
+    }
+    .features__list-item {
+        order: 2;
+        width: 330px;
+        padding: 7px 0 7px 89px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.4;
+
+        &::before {
+            width: 64px;
+            height: 64px;
+            background: url("../img/icons/css_sprites-d.png") no-repeat;
+            background-position: -94px -178px;
+        }
+        &--course::before {
+            background-position: -94px -10px;
+        }
+        &--storage::before {
+            background-position: -178px -10px;
+        }
+        &--reminders::before {
+            background-position: -178px -94px;
+        }
+        &--calendar::before {
+            background-position: -10px -94px;
+        }
+        &--diary::before {
+            background-position: -94px -94px;
+        }
+        &--news::before {
+            background-position: -10px -178px;
+        }
+        &--consult::before {
+            background-position: -10px -10px;
+        }
+        &--consult::after {
+            right: 75px;
+        }
+    }
+    .features__list-item--control,
+    .features__list-item--calendar {
+        order: 0;
+    }
+    .features__list-item--storage,
+    .features__list-item--news {
+        order: 1;
+    }
+    .features__list-item--course,
+    .features__list-item--reminders {
+        padding-right: 50px;
+    }
+}

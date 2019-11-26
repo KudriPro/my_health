@@ -1,0 +1,166 @@
+.health-indicator {
+    width: 360px;
+    margin: 0 auto;
+    padding: 0 36px 0 36px;
+    box-sizing: border-box;
+    background-image: url("../img/decorative/spots2-m.png");
+    background-repeat: no-repeat;
+    background-position: 0 40%;
+}
+.health-indicator__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: normal;
+    color: @bright-color-text2;
+    font-weight: normal;
+}
+.health-indicator__list {
+    .no-list-style();
+    color: @warm-text;
+}
+.health-indicator__item {
+    position: relative;
+    padding: 1px 0 1px 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: normal;
+
+    & br {
+        display: none;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: @bright-color-text2;
+    }
+}
+.health-indicator__mobile-app {
+    padding: 0 0 64px 0;
+}
+.health-indicator__list-wrap {
+    margin-bottom: 39px;
+}
+@media(min-width:@tablet-width) {
+    .health-indicator {
+        position: relative;
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+        background-image: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -25px;
+            right: 0;
+            width: 397px;
+            height: 372px;
+            background-image: url("../img/decorative/spots-tablet.png");
+            background-repeat: no-repeat;
+        }
+    }
+    .health-indicator__wrap {
+        width: 570px;
+        margin: 0 auto;
+    }
+    .health-indicator__title {
+        width: 385px;
+        font-size: 28px;
+    }
+    .health-indicator__item {
+        width: 235px;
+
+        & br {
+            display: block;
+        }
+    }
+    .health-indicator__item--heart {
+        padding-bottom: 7px;
+    }
+    .health-indicator__list-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .health-indicator__mobile-app {
+        display: none;
+    }
+    .health-indicator__list-wrap {
+        margin-bottom: 30px;
+    }
+}
+@media(min-width:@desktop-width) {
+    .health-indicator {
+        &::after {
+            top: -200px;
+            right: 0;
+            width: 400px;
+            height: 910px;
+            background-image: url("../img/decorative/spots-desk.png");
+            background-repeat: no-repeat;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -60px;
+            width: 394px;
+            height: 394px;
+            background-image: url("../img/decorative/back-pill-desk.png");
+            background-repeat: no-repeat;
+        }
+    }
+    .health-indicator__wrap {
+        width: 1500px;
+    }
+    .health-indicator__title {
+        width: 450px;
+        padding-top: 206px;
+        margin-bottom: 40px;
+        font-size: 46px;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+    .health-indicator__list-wrap {
+        flex-direction: column;
+        width: 444px;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.78;
+    }
+    .health-indicator__item {
+        order: 2;
+        padding: 6px 0 6px 25px;
+
+        &::before {
+            width: 7px;
+            height: 7px;
+        }
+    }
+    .health-indicator__list {
+
+        &:first-child {
+            order: 1;
+        }
+        display: flex;
+        flex-direction: column;
+    }
+    .health-indicator__item--pressure {
+        order: 0;
+    }
+    .health-indicator__item--heart {
+        order: 1;
+    }
+    .health-indicator__item--heart {
+        & br {
+            display: none;
+        }
+    }
+}
