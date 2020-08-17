@@ -42,6 +42,4 @@ gulp.task("less", function () {
     gulp.watch("*.html").on("change", server.reload);
   });
 
-
   gulp.task("start", gulp.series("less", "server"));
-

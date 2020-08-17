@@ -31,25 +31,25 @@
                 <div class="main-header__logo-company">
                     <img src="build/img/content/logo-company-header.svg" alt="Логотип компании «Медицинские информационные решения»" width="127" height="39">
                 </div>
-                <div class="main-header__wrapper site-nav">
-                    <button class="site-nav__button hamburger" type="button">
-                        <span class="visually-hidden">Открыть/скрыть меню</span>
-                    </button>
-                    <!-- <ul class="site-nav__list">
-                        <li class="site-nav__item">
-                            <a class="site-nav__item-link">Главная</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a class="site-nav__item-link" href="#">Справочник здоровья</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a class="site-nav__item-link" href="#">Форма отзыва</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a class="site-nav__item-link" href="#">Информация</a>
-                        </li>
-                    </ul> -->
-                </div>
+                <button class="main-header__button hamburger" type="button">
+                    <span class="visually-hidden">Открыть/скрыть меню</span>
+                </button>
+            </div>
+            <div class="main-header__wrapper site-nav">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__item-link">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__item-link" href="#">Справочник здоровья</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__item-link" href="#">Форма отзыва</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__item-link" href="#">Информация</a>
+                    </li>
+                </ul>
             </div>
         </nav>
         <div class="main-header__promo-wrap">
@@ -78,23 +78,23 @@
                     <picture>
                         <source media="(min-width:1550px)"
                                 srcset="build/img/content/mob-copy-5.png">
-                        <img class="slider__slide slider__slide1" src="build/img/content/slide-header3.png" alt="Мобильное приложение">
+                        <img class="slider__slide slider__slide1" id="ios" src="build/img/content/slide-header3.png" alt="Мобильное приложение">
                     </picture>
                     <picture>
                         <source media="(min-width:1550px)"
                                 srcset="build/img/content/group-copy-31@2x.png">
-                        <img class="slider__slide slider__slide2 active" src="build/img/content/slide-header2.png" alt="Мобильное приложение">
+                        <img class="slider__slide slider__slide2 active" id="android" src="build/img/content/slide-header2.png" alt="Мобильное приложение">
                     </picture>
                 </div>
                 <div class="slider__buttons">
                     <div class="slider__buttons-wrap slider__buttons--left">
-                        <button class="slider__btn slider__btn-prev" type="button">
+                        <button class="slider__btn slider__btn-prev" data-tab="ios" type="button">
                             <i class="visually-hidden">iOS</i>
                         </button>
                         <span>iOS</span>
                     </div>
                     <div class="slider__buttons-wrap slider__buttons--right">
-                        <button class="slider__btn slider__btn-next active" type="button">
+                        <button class="slider__btn slider__btn-next active" data-tab="android" type="button">
                             <i class="visually-hidden">Android</i>
                         </button>
                         <span>Android</span>
