@@ -1,0 +1,130 @@
+.slider {
+    color: @warm-text;
+}
+.slider-wrap {
+    min-height: 450px;
+    position: relative;
+    margin-top: 10px;
+}
+.slider__slide {
+    position: absolute;
+    left: 0;
+    transform-origin: 50% 50%;
+    transition: transform 0.5s ease-in-out;
+}
+.slider__slide1 {
+    transform: translateY(35px);
+    transform: scale(0.8);
+}
+.slider__slide2 {
+    transform: translateX(80px);
+}
+.slider__slide1.active,
+.slider__slide2.active {
+    z-index: 1;
+}
+.slider__slide1.active {
+    transform: scale(0.93);
+}
+.slider__buttons {
+    position: relative;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+
+    &--left {
+        margin-right: 50px;
+    }
+    &--right {
+        margin-left: 20px;
+    }
+}
+.slider__buttons-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+}
+.slider__btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: 7px;
+        width: 5px;
+        height: 5px;
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+}
+.slider__btn.active {
+    &::before {
+        background-color: black;
+    }
+    & + span{
+        font-weight: 700;
+    }
+}
+@media(min-width: @tablet-width) {
+    .slider {
+        position: absolute;
+        right: -65px;
+        bottom: 10px;
+        width: 362px;
+        height: 280px;
+    }
+    .slider__buttons {
+        right: 10px;
+        z-index: 2;
+
+        &--left,
+        &--right {
+            transform: translateX(-15px);
+        }
+    }
+}
+@media(min-width: @desktop-width) {
+    .slider {
+        right: 0;
+    }
+    .slider-wrap {
+        width: 550px;
+        height: 618px;
+        top: -190px;
+        right: 240px;
+    }
+    .slider__slide1 {
+        top: 40px;
+        transform: scale(1);
+    }
+    .slider__slide2 {
+        width: 401px;
+        left: 100px;
+    }
+    .slider__slide1.active {
+        transform: translateY(20px);
+    }
+    .slider__buttons {
+        top: -150px;
+        left: -150px;
+
+        &--left {
+            margin-right: 130px;
+        }
+    }
+    .slider__buttons span {
+        font-size: 24px;
+    }
+}

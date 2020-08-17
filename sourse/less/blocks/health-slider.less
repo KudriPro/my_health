@@ -1,0 +1,117 @@
+.health-slider {
+    display: none;
+}
+@media(min-width: @tablet-width) {
+    .health-slider {
+        position: relative;
+        display: block;
+        width: 300px;
+        height: 550px;
+        margin: 0 auto;
+        margin-bottom: 55px;
+        background-image: url("../img/decorative/mob-wrap-tablet.png"),
+                          url("../img/decorative/rectangle.svg");
+        background-repeat: no-repeat;
+        background-size: 240px 500px, 280px 540px;
+        background-position: top center, 10px 0;
+        z-index: 2;
+
+        & img {
+            position: absolute;
+            top: 27px;
+            left: 37px;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        & img.opacity{
+            opacity: 1;
+        }
+    }
+    .health-slider__btn {
+        position: absolute;
+        top: 50%;
+        width: 47px;
+        height: 48px;
+        margin-top: -54px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        background-color: @bright-color-text1;
+        box-shadow: 0 3px 9px 0 rgba(0, 63, 73, 0.1),
+                    0 10px 25px 0 rgba(186, 16, 12, 0.3);
+        &:hover {
+            background-color: darken(@bright-color-text1, 5%);
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            top: 18px;
+            left: 20px;
+            width: 13px;
+            height: 4px;
+            transform: rotate(40deg);
+            background-color: @light-color-text;
+        }
+        &::after {
+            top: 25px;
+            transform: rotate(-45deg);
+        }
+        &-next {
+            right: -60px;
+        }
+        &-prev {
+            left: -60px;
+            transform: scaleX(-1);
+        }
+    }
+}
+@media(min-width: @desktop-width) {
+    .health-slider {
+        position: absolute;
+        top: 120px;
+        right: 350px;
+        width: 390px;
+        height: 770px;
+        margin-bottom: 0;
+        background-size: 342px 715px, 390px 770px;
+        background-position: top center, 10px 0;
+    }
+    .health-slider__slides {
+        & img {
+            top: 35px;
+            left: 34px;
+            width: 322px;
+            height: 645px;
+        }
+    }
+    .health-slider__btn {
+        width: 82px;
+        height: 82px;
+
+
+        &::before,
+        &::after {
+            width: 23px;
+            height: 5px;
+            top: 30px;
+            left: 32px;
+        }
+        &::after {
+            top: 43px;
+            left: 33px;
+        }
+        &-next {
+            right: -138px;
+        }
+        &-prev {
+            left: -135px;
+        }
+    }
+    .health-indicator__list-wrap {
+        padding-bottom: 222px;
+    }
+}

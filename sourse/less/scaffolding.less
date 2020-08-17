@@ -1,0 +1,43 @@
+@font-face {
+    font-weight: normal;
+    font-family: "opensans";
+    font-style: normal;
+    src: url("../../build/fonts/opensans.woff2") format("woff2"),
+         url("../../build/fonts/opensans.woff") format("woff"),
+         url("../../build/fonts/opensans.ttf") format("ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 360px;
+    font-family: "opensans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    color: @main-color-text;
+    background-color: @bg-light;
+}
+a {
+	text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.visually-hidden:not(:focus):not(:active) {
+// input[type="checkbox"].visually-hidden,
+// input[type="radio"].visually-hidden {
+	position: absolute;
+	width: 1px;
+    height: 1px;
+    margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}
